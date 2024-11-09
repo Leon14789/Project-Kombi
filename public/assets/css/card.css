@@ -1,0 +1,72 @@
+.container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Estilo do Card */
+.card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 287px;
+  border-radius: 8px;
+  border-top-right-radius: 180px;
+  overflow: visible;
+  position: relative;
+  height: 330px;
+  margin: 5%;
+}
+
+.card-image {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 41vh;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: relative;
+  padding: 190px 5% 0 5%
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.icon-card {
+  position: absolute;
+  top: 130px;
+  background-color: #fff;
+  border: 1px solid #d5bb92;
+  padding: 4%;
+  border-radius: 50%;
+  left: 2%;
+  z-index: 10;
+}
+
+.card-hr {
+  position: relative;
+  top: 20px; /* Ajuste conforme necessário para alinhar com o ícone */
+  left: 0;
+  width: 80%; /* Ajuste conforme necessário */
+  margin: 0 auto; /* Centralizar o hr */
+  border: none;
+  border-top: 1px solid #d5bb92;
+}

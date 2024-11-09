@@ -1,0 +1,57 @@
+.section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    width: 45%;
+  max-width: 50% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.image-container-form img {
+    height: auto;
+    display: block;
+    width: 80vh;
+  }
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 4.3vh 40vh 16.2vh 15vh;
+  background: linear-gradient(126deg, rgba(2,126,104,1) 36%, rgba(212,220,192,1) 80%);
+  color: #fff !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form input {
+    margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  width: 70vh;
+}
+
+
+.input-form {
+    transform: none !important;
+}
+
+.form-container form {
+    color: #fff !important;
+}
+
+.form-container p {
+    color:  #fff !important;
+}
