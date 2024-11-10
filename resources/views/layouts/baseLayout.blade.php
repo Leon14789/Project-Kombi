@@ -25,5 +25,7 @@
 </body>
 <script src="/assets/js/carousel.js"></script>
 <script src="/assets/js/accordeon.js"></script>
+<script src="/assets/js/footer.js"></script>
+
 
 </html>
