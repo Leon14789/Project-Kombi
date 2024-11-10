@@ -53,6 +53,6 @@ Após isso rode o comando
 ```
 
 
-# Configure o Banco de Dados:
+# Suporte
 
 <p> Caso tenha alguma dúvida ou precise de assistência, sinta-se à vontade para entrar em contato </P>
