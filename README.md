@@ -46,6 +46,11 @@ No arquivo .env, ajuste as configurações para o banco de dados, incluindo:
 - **Nome do banco de dados**
 - **Usuário e senha**
 
+Após isso rode o comando
+
+```bash
+Php artisan migrate
+
 # Suporte
 
-<p> Caso tenha alguma dúvida ou precise de assistência, sinta-se à vontade para entrar em contato. </P>
+<p> Caso tenha alguma dúvida ou precise de assistência, sinta-se à vontade para entrar em contato </P>
