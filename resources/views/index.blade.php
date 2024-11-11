@@ -96,19 +96,25 @@
 </section>
 <section class="section-container2">
     <div class="accordion-container">
-        <h2>Ficou com alguma <strong>dúvida</strong>?</h2> <button class="accordion">Pergunta 1 <span class="icon"><img src="/assets/images/icons/icon7.svg" alt="" /></span></button>
+        <h2>Ficou com alguma <strong>dúvida</strong>?</h2>
+
+        @foreach($questions as $question)
+        <button class="accordion">
+            {{ $question->title ?: 'Título da pergunta não encontrado' }}
+            <span class="icon"><img src="/assets/images/icons/icon7.svg" alt="" /></span>
+        </button>
         <div class="accordion-content">
-            <p>Resposta para a Pergunta 1</p>
-        </div> <button class="accordion">Pergunta 2 <span class="icon"><img src="/assets/images/icons/icon7.svg" alt="" /></span></button>
-        <div class="accordion-content">
-            <p>Resposta para a Pergunta 2</p>
-        </div> <button class="accordion">Pergunta 3 <span class="icon"><img src="/assets/images/icons/icon7.svg" alt="" /></span></button>
-        <div class="accordion-content">
-            <p>Resposta para a Pergunta 3</p>
+            <p>{{ $question->descrption ?: 'Resposta da pergunta não encontrada' }}</p>
         </div>
+        @endforeach
+
+
     </div>
-    <div class="image-container"> <img src="/assets/images/banners/bannerPrancheta-9.png" alt="Descrição da Imagem"> </div>
+    <div class="image-container">
+        <img src="/assets/images/banners/bannerPrancheta-9.png" alt="Descrição da Imagem">
+    </div>
 </section>
+
 
 <section class="section-container">
     <div class="image-container-form"> <img src="assets/images/banners/Prancheta 10.png" alt="Descrição da Imagem"> </div>
@@ -127,7 +133,7 @@
     </div>
 </section>
 
- 
+
 
 
 

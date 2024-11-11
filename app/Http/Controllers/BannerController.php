@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,33 +12,39 @@ class BannerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $imageDirectory = 'carousel'; 
-        $defaultImages = [
-            'defaultBanner1.jpg',
-            'defaultBanner2.jpg',
-            'defaultBanner3.jpg',
-        ];
-
-        $images = [];
-
-        for ($i = 1; $i <= 3; $i++) {
-            $filename = "carouselImage{$i}.jpg";
-
-            // Verifica se a imagem personalizada existe
-            if (Storage::disk('public')->exists("$imageDirectory/$filename")) {
-                // URL pública da imagem armazenada
-                $images[] = asset("storage/$imageDirectory/$filename");
-            } else {
-                // URL da imagem padrão
-                $images[] = asset("assets/images/banners/{$defaultImages[$i - 1]}");
+    
+        public function index()
+        {
+            // Recuperar as últimas 3 perguntas
+            $questions = Question::latest()->take(3)->get();
+        
+            // Você já tem a lógica para os banners
+            $imageDirectory = 'assets/images/banners/';
+            $defaultImages = [
+                'defaultBanner1.jpg',
+                'defaultBanner2.jpg',
+                'defaultBanner3.jpg',
+            ];
+        
+            $images = [];
+        
+            for ($i = 1; $i <= 3; $i++) {
+                $filename = "carouselImage{$i}.jpg";
+        
+                // Verifica se a imagem personalizada existe
+                if (Storage::disk('public')->exists("$imageDirectory/$filename")) {
+                    // URL pública da imagem armazenada
+                    $images[] = asset("storage/$imageDirectory/$filename");
+                } else {
+                    // URL da imagem padrão
+                    $images[] = asset("assets/images/banners/{$defaultImages[$i - 1]}");
+                }
             }
+        
+            // Passar tanto as imagens quanto as perguntas para a view
+            return view('index', compact('images', 'questions'));
         }
-
-        // Retorna a view 'index' com as imagens
-        return view('index', compact('images'));
-    }
+    
 
 
     /**
