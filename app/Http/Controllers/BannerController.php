@@ -19,7 +19,7 @@ class BannerController extends Controller
             $questions = Question::latest()->take(3)->get();
         
             // Você já tem a lógica para os banners
-            $imageDirectory = 'assets/images/banners/';
+            $imageDirectory = 'carousel';
             $defaultImages = [
                 'defaultBanner1.jpg',
                 'defaultBanner2.jpg',

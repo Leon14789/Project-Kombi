@@ -239,3 +239,54 @@ h2 {
   transition: background 0.3s ease;
   width: 85%;
 }
+
+@media (max-width: 768px) {
+
+    header div img {
+        visibility: hidden;
+
+        display: none !important;
+    }
+
+    .cards-container {
+        display: grid !important;
+  grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .right-content {
+        visibility: hidden;
+
+        display: none !important;
+    }
+
+    .image-container {
+        visibility: hidden;
+
+        display: none !important;
+    }
+
+    .image-container-form {
+        visibility: hidden;
+
+        display: none !important;
+    }
+
+    .form-container form input {
+        width: 41vh !important;
+    }
+    
+    .form-container {
+        padding: 20px !important;
+    }
+
+    .section {
+        padding: 50px 10px;
+    }
+
+    .card-image {
+        width: 37vh !important;
+        height: 51%;
+    }
+
+
+}

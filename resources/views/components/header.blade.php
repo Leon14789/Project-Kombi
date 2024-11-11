@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="logo">
+    <div>
         <img src="/assets/images/logo.png" alt="Logo da Empresa" />
     </div>
     <nav class="nav">

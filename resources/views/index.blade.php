@@ -121,13 +121,14 @@
     <div class="form-container">
         <h1>Solicite um orçamento personalizado</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce <br /> pulvinar, neque ac molestie luctus, dolor purus.</p>
-        <form action="/generateOrca" method="post">
+        <form action="{{ route('budget.save') }}" method="POST" enctype="multipart/form-data">
+        @csrf
             <label>Seu nome</label>
             <input class="input-form" type="text" name="name" placeholder="Digite seu nome completo">
             <label>E-mail</label>
             <input class="input-form" type="email" name="email" placeholder="Digite seu melhor e-mail">
             <label>Celular</label>
-            <input class="input-form" type="text" name="phone" placeholder="Digite seu telefone">
+            <input class="input-form" type="text" name="telephone" placeholder="Digite seu telefone">
             <button class="button-form" type="submit">Enviar</button>
         </form>
     </div>
