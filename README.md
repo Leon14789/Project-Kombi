@@ -16,10 +16,10 @@
 
 O **Projeto Kombi** foi desenvolvido com as tecnologias mencionadas acima, visando demonstrar um conhecimento aprofundado e aplicado em cada uma delas. Esse sistema possui uma interface voltada ao usuário e uma área administrativa, onde é possível gerenciar o conteúdo exibido no site.
 
-Ao acessar a rota `localhost/login` e inserir as credenciais:
+Ao acessar a rota `localhost/register` para criar um novo usuario, após isso insira as credenciais na rota:  `localhost/login`
 
-- **E-mail:** `teste@teste.com`
-- **Senha:** `12345678`
+- **E-mail:**  
+- **Senha:** 
 
 você será redirecionado para o **Dashboard Administrativo**. Nesta área, você terá acesso às seguintes funcionalidades:
 
@@ -50,7 +50,11 @@ Após isso rode o comando
 
 ```bash
     Php artisan migrate 
+    php artisan serve
+    npm run dev
 ```
+
+
 
 
 # Suporte

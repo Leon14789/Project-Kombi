@@ -11,15 +11,16 @@ class Carousel extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $images;
+    public function __construct($images)
     {
-        //
+        $this->images = $images;
     }
 
     /**
      * Get the view / contents that represent the component.
      */
-    public function render(): View|Closure|string
+    public function render()
     {
         return view('components.carousel');
     }

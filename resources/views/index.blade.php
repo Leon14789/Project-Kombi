@@ -4,7 +4,8 @@
 
 @section('content')
 
-<x-carousel />
+<x-carousel :images="$images" />
+
 
 <section class="section">
     <div class="container">
